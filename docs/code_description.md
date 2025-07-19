@@ -13,7 +13,7 @@ All the scripts inside the ./aml_config are config files. These are the files wh
 
 - conda_dependencies.yml : This is a mandatory file. This files contains the list of dependencies which are needed by the training/scoring script to run. This file is used to prepare environment for the local run(user managed/system managed) and docker run(local/remote).
 
-- security_config.json : This file contains the credentials to the remove vm where we want to train the model. This config is used by the script 02-AttachTrainingVM.py to attach remote vm as a compute to the workspace. Attaching remote vm to workspace is one time operation. It is recommended not to publish this file with credentials populated in it. You can put the credentials, run the 02-AttachTrainingVM.py manually and clear the credentials before pushing it to git.
+- security_config.json : This file contains the credentials to the remote vm where we want to train the model. This config is used by the script 02-AttachTrainingVM.py to attach remote vm as a compute to the workspace. Attaching remote vm to workspace is one time operation. It is recommended not to publish this file with credentials populated in it. You can put the credentials, run the 02-AttachTrainingVM.py manually and clear the credentials before pushing it to git.
 
 - aks_webservice.json : This is an optional config. If you already have an AKS attached to your workspace, then provide the details in this file. If not, you do not have to check in this file to git.
 
